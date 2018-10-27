@@ -14,9 +14,9 @@ public class JogoDaVelha {
     public JogoDaVelha() {
         System.out.println("Jogador 1 - Digite seu nome.");
         Scanner n1 = new Scanner(System.in);
+        j1 = new Jogador(n1.nextLine(),'O');
         System.out.println("Jogador 2 - Digite seu nome.");
         Scanner n2 = new Scanner(System.in);
-        j1 = new Jogador(n1.nextLine(),'O');
         j2 = new Jogador(n2.nextLine(),'X');
         matrizJogo = new char[3][3];
         for(int i = 0; i<3; i++){
@@ -88,17 +88,11 @@ public class JogoDaVelha {
             if(verificaVencedor(j2.getCarac())){
                 System.out.println("Fim de jogo! Jogador vencedor: "+j2.getNome());
                 break;
-            }
-            
+            }  
         }
-        
         if(i==9){
             System.out.println("Fim de jogo! Empate!");
         }
-        
-        
-        
-        
     }
     
 }
